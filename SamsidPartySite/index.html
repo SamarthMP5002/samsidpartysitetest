@@ -157,11 +157,11 @@
 
         <script>
 
-
+                
                 function handleGoogle() {
 
-                    var provider = new firebase.auth.GoogleAuthProvider();
-                    firebase.auth().signInWithPopup(provider).then(function (result) {
+                    
+                    firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(function (result) {
                         var token = result.credential.accessToken;
                         firebaseUser = result.user;
                     }).catch(function (error) {
